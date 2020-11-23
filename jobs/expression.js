@@ -1,32 +1,27 @@
-{
-  "configuration": {
-   
-  },
-  "data": {
-    "__query_params": {},
-    "body": {
-      "Age": "25",
-      "First_Name": "Felix",
-      "Gender": "male",
-      "Last_Name": "Phiri",
-      "Services": "service_1 service_2 service_4",
-      "__version__": "vwrdjsTYRoHAJxbZWnCcor",
-      "_attachments": [],
-      "_geolocation": [null, null],
-      "_id": 75126512,
-      "_notes": [],
-      "_status": "submitted_via_web",
-      "_submission_time": "2020-11-20T11:18:19",
-      "_submitted_by": null,
-      "_tags": [],
-      "_uuid": "2e512959-7e18-476f-b420-96362fea69a1",
-      "_validation_status": {},
-      "_xform_id_string": "aMiEiFjejFkpRLuc3krcvp",
-      "end": "2020-11-20T13:18:08.687+02:00",
-      "formhub/uuid": "10f8e684befa4bd284ee05ff48dd62c8",
-      "meta/instanceID": "uuid:2e512959-7e18-476f-b420-96362fea69a1",
-      "start": "2020-11-20T13:17:28.494+02:00"
-    },
-    "form": "beneficiary_registration"
+upsert(
+  'beneficiary_registration',
+  'formhub_uuid',
+  {
+    xform_id_string: state.data.body._xform_id_string,
+    age: state.data.body.Age,
+    first_name: state.data.body.First_Name,
+    gender: state.data.body.Gender,
+    last_name: state.data.body.Last_Name,
+    services: state.data.body.Services,
+    version: state.data.body.__version__,
+    attachments: state.data.body._attachments,
+    geolocation: state.data.body._geolocation,
+    id: state.data.body._id,
+    notes: state.data.body._notes,
+    status: state.data.body._status,
+    submission_time: state.data.body._submission_time,
+    submitted_by: state.data.body._submitted_by,
+    tags: state.data.body._tags,
+    uuid_column: state.data.body._uuid,
+    validation_status: state.data.body._validation_status,
+    end_time: state.data.body.end,
+    formhub_uuid: state.data.body['formhub/uuid'],
+    meta_instance_id: state.data.body['meta/instanceID'],
+    start_time: state.data.body.start
   }
-}
+);
