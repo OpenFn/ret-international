@@ -7,7 +7,7 @@ upsert('beneficiary_registration', 'formhub_uuid', {
   services: state.data.body.Services,
   version: state.data.body.__version__,
   // attachments: state.data.body._attachments,
-  // geolocation: state.data.body._geolocation,
+  geolocation: state.data.body._geolocation,
   id: state.data.body._id,
   // notes: state.data.body._notes,
   status: state.data.body._status,
