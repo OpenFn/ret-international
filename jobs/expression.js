@@ -4,7 +4,7 @@ upsert('beneficiary_registration', 'formhub_uuid', {
   first_name: state.data.body.First_Name,
   gender: state.data.body.Gender,
   last_name: state.data.body.Last_Name,
-  services: state.data.body.Services,
+  services: `{${state.data.body.Services}}`,
   version: state.data.body.__version__,
   id: state.data.body._id,
   status: state.data.body._status,
